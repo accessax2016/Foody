@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorRed"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_foody"
+            android:id="@+id/imgFoody"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_main_4">
+
+            <TextView
+                android:text="Ở đâu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvODau"
+                android:paddingBottom="5.0dp"
+                android:paddingLeft="8.0dp"
+                android:paddingRight="8.0dp"
+                android:paddingTop="5.0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:text="Ăn gì"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAnGi"
+                android:paddingBottom="5.0dp"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="10.0dp"
+                android:paddingTop="5.0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/round_left_2"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_plus_white"
+            android:id="@+id/imgPlus"
+            android:padding="10dp"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout" />
+</RelativeLayout>

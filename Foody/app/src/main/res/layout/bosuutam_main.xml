@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorRed"
+        android:id="@+id/relativeLayout">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_main_4">
+
+            <TextView
+                android:text="Bộ sưu tập địa điểm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvBST_DiaDiem"
+                android:paddingBottom="5.0dp"
+                android:paddingLeft="5.0dp"
+                android:paddingRight="5.0dp"
+                android:paddingTop="5.0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:text="Bộ sưu tập ảnh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvBST_Anh"
+                android:paddingBottom="5.0dp"
+                android:paddingLeft="20.0dp"
+                android:paddingRight="20.0dp"
+                android:paddingTop="5.0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/round_left_2"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout" />
+
+
+
+
+</RelativeLayout>

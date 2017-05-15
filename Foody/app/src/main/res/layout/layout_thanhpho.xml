@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorGray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:text="TP.HCM"
+                    android:id="@+id/tvDiaDiem"
+                    android:padding="5dp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/colorRed"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:text="Đổi tỉnh thành"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:layout_height="35dp"
+                    android:id="@+id/btnDoiTinhThanh"
+                    android:drawableLeft="@drawable/ic_kite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9">
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expand_listview"
+                android:groupIndicator="@null">
+
+            </ExpandableListView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <Button
+            android:text="Hủy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHuy"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+
+</LinearLayout>

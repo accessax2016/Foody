@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tab>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/home_bottombar_selector"
+        activeColor="@color/colorRed"
+        />
+    <tab
+        id="@+id/tab_collection"
+        icon="@drawable/collection_bottombar_selector"
+        activeColor="@color/colorRed"
+        />
+    <tab
+        id="@+id/tab_search"
+        icon="@drawable/search_bottombar_selector"
+        activeColor="@color/colorRed"
+        />
+    <tab
+        id="@+id/tab_bell"
+        icon="@drawable/bell_bottombar_selector"
+        activeColor="@color/colorRed"
+        />
+    <tab
+        id="@+id/tab_user"
+        icon="@drawable/user_bottombar_selector"
+        activeColor="@color/colorRed"
+        />
+</Tab>

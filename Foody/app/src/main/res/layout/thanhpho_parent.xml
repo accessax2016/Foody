@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.75">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:text="Parent"
+            android:id="@+id/heading_item"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6.25"
+        android:paddingRight="10dp">
+
+        <Button
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:text="9999 đường"
+            android:textSize="10sp"
+            android:textAllCaps="false"
+            android:layout_height="35dp"
+            android:id="@+id/btnSoDuong" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

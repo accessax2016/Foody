@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/idTaiKhoan"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@color/colorRed">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_arrow_left"
+            android:tint="@color/colorWhite"
+            android:background="@color/colorRed"
+            android:id="@+id/btnQuayLaiThanhPho"
+            android:scaleType="fitXY"
+            android:padding="10dp"/>
+
+        <TextView
+            android:text="Chọn Tỉnh/Thành phố"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:layout_weight="6"
+            android:layout_marginTop="12dp"
+           />
+        <Button
+            android:text="Xong"
+            android:textSize="13dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.52"
+            android:background="@color/colorRed"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/btnXongThanhPho"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="12">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listChonThanhPho">
+
+        </ListView>
+
+
+    </LinearLayout>
+</LinearLayout>
