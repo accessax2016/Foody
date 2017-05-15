@@ -36,7 +36,6 @@ import static com.example.thanhtung.foody.MainActivity.Login;
  */
 
 public class Home extends Fragment {
-
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
     public TextView tvODau, tvAnGi;

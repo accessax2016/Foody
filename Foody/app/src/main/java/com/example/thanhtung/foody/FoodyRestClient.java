@@ -19,10 +19,18 @@ public class FoodyRestClient {
     private static AsyncHttpClient client = new AsyncHttpClient();
 
     public static void get(Context context, String url, Header[] headers, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        client.setTimeout(60*1000);
+        client.setConnectTimeout(600*1000);
+        client.setResponseTimeout(60*1000);
+        client.setMaxConnections(60);
         client.get(context, getAbsoluteUrl(url), headers, params, responseHandler);
     }
 
     public static void post(Context context, String url, Header[] headers, RequestParams params, String contentType, AsyncHttpResponseHandler responseHandler) {
+        client.setTimeout(60*1000);
+        client.setConnectTimeout(60*1000);
+        client.setResponseTimeout(60*1000);
+        client.setMaxConnections(60);
         client.post(context, getAbsoluteUrl(url), headers, params, contentType, responseHandler);
     }
 

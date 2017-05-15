@@ -1,7 +1,6 @@
 package com.example.thanhtung.foody.Tab_Fragment;
 
 import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.thanhtung.foody.Adapter.QuanAnAdapter;
 import com.example.thanhtung.foody.FoodyRestClient;
@@ -81,9 +81,7 @@ public class ODau_Tab_Home extends Fragment {
             @Override
             public void onRefresh() {
                 swipeRefreshLayout.setRefreshing(true);
-                //getODau();
-                //new getODauItem().execute();
-                test();
+                getODau();
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
@@ -130,7 +128,7 @@ public class ODau_Tab_Home extends Fragment {
 
                     @Override
                     public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                        progressDialog = ProgressDialog.show(getContext(),"Lỗi","Vui lòng kiểm tra kết nối", true);
+                        Toast.makeText(getActivity(), responseString, Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -140,61 +138,8 @@ public class ODau_Tab_Home extends Fragment {
                 });
     }
 
-    protected class getODauItem extends AsyncTask<RequestParams, Process, ArrayList<ODau>> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            progressDialog = new ProgressDialog(getContext(), R.style.MyTheme);
-            progressDialog.setCancelable(false);
-            progressDialog.show();
-        }
-
-        @Override
-        protected ArrayList<ODau> doInBackground(RequestParams... params) {
-            List<Header> headers = new ArrayList<Header>();
-            headers.add(new BasicHeader("Accept", "application/json"));
-            FoodyRestClient odau = new FoodyRestClient();
-            odau.get(getContext(), "api/ODau/GetODauList", headers.toArray(new Header[headers.size()]),
-                    params[0], new JsonHttpResponseHandler() {
-                        @Override
-                        public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                            listODau = new ArrayList<ODau>();
-                            for (int i = 0; i < response.length(); i++) {
-                                try {
-                                    listODau.add(new ODau(response.getJSONObject(i)));
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    });
-            return listODau;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<ODau> oDaus) {
-            super.onPostExecute(oDaus);
-            quanAnAdapter = new QuanAnAdapter(getContext(), imgHeader, imgCategory, tvCategory, listODau);
-            listView.setAdapter(quanAnAdapter);
-            quanAnAdapter.notifyDataSetChanged();
-            listView.scrollToPosition(0);
-
-            progressDialog.dismiss();
-        }
-    }
-
-    private void test() {
-        RequestParams params = new RequestParams();
-        params.put("TenDanhMuc", danhmuc_odau);
-        params.put("KieuDiaDiem", kieudiadiem_odau);
-        params.put("TenDiaDiem", diadiem_odau);
-        new getODauItem().execute(params);
-    }
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        //getODau();
-        //new getODauItem().execute();
-        test();
+        getODau();
     }
 }

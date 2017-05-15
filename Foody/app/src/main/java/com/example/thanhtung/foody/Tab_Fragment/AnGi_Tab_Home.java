@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.thanhtung.foody.Adapter.MonAnAdapter;
 import com.example.thanhtung.foody.FoodyRestClient;
@@ -131,7 +132,7 @@ public class AnGi_Tab_Home extends Fragment {
 
                     @Override
                     public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                        progressDialog = ProgressDialog.show(getContext(),"Lỗi","Vui lòng kiểm tra kết nối", true);
+                        Toast.makeText(getActivity(), responseString, Toast.LENGTH_LONG).show();
                     }
 
                     @Override

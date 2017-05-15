@@ -48,6 +48,9 @@ namespace FoodyServer
     partial void InsertMonAn(MonAn instance);
     partial void UpdateMonAn(MonAn instance);
     partial void DeleteMonAn(MonAn instance);
+    partial void InsertTaiKhoan(TaiKhoan instance);
+    partial void UpdateTaiKhoan(TaiKhoan instance);
+    partial void DeleteTaiKhoan(TaiKhoan instance);
     #endregion
 		
 		public DBFoodyDataContext() : 
@@ -125,6 +128,14 @@ namespace FoodyServer
 			get
 			{
 				return this.GetTable<MonAn>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TaiKhoan> TaiKhoans
+		{
+			get
+			{
+				return this.GetTable<TaiKhoan>();
 			}
 		}
 	}
@@ -1376,6 +1387,116 @@ namespace FoodyServer
 						this._MaQuanAn = default(int);
 					}
 					this.SendPropertyChanged("QuanAn");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TaiKhoan")]
+	public partial class TaiKhoan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TaiKhoan1;
+		
+		private string _MatKhau;
+		
+		private string _TenHienThi;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTaiKhoan1Changing(string value);
+    partial void OnTaiKhoan1Changed();
+    partial void OnMatKhauChanging(string value);
+    partial void OnMatKhauChanged();
+    partial void OnTenHienThiChanging(string value);
+    partial void OnTenHienThiChanged();
+    #endregion
+		
+		public TaiKhoan()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="TaiKhoan", Storage="_TaiKhoan1", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TaiKhoan1
+		{
+			get
+			{
+				return this._TaiKhoan1;
+			}
+			set
+			{
+				if ((this._TaiKhoan1 != value))
+				{
+					this.OnTaiKhoan1Changing(value);
+					this.SendPropertyChanging();
+					this._TaiKhoan1 = value;
+					this.SendPropertyChanged("TaiKhoan1");
+					this.OnTaiKhoan1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this.OnMatKhauChanging(value);
+					this.SendPropertyChanging();
+					this._MatKhau = value;
+					this.SendPropertyChanged("MatKhau");
+					this.OnMatKhauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenHienThi", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TenHienThi
+		{
+			get
+			{
+				return this._TenHienThi;
+			}
+			set
+			{
+				if ((this._TenHienThi != value))
+				{
+					this.OnTenHienThiChanging(value);
+					this.SendPropertyChanging();
+					this._TenHienThi = value;
+					this.SendPropertyChanged("TenHienThi");
+					this.OnTenHienThiChanged();
 				}
 			}
 		}

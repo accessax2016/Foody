@@ -64,4 +64,11 @@
       <Association Name="QuanAn_MonAn" Member="QuanAn" ThisKey="MaQuanAn" OtherKey="id" Type="QuanAn" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="TaiKhoan" Member="TaiKhoan1" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHienThi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>
