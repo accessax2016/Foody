@@ -1,0 +1,122 @@
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\ApplicationInsights.config
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\csc.exe
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\vbc.exe
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\FoodyServer.dll.config
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\FoodyServer.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\FoodyServer.pdb
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Newtonsoft.Json.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Web.Http.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\Newtonsoft.Json.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Web.Http.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.xml
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\obj\Debug\FoodyServer.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\obj\Debug\FoodyServer.dll
+C:\Users\Thanh Tung\Desktop\FoodyServer\FoodyServer\obj\Debug\FoodyServer.pdb
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\ApplicationInsights.config
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\csc.exe
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\System.Collections.Immutable.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\vbc.exe
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe.config
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\FoodyServer.dll.config
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\FoodyServer.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\FoodyServer.pdb
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.Agent.Intercept.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Newtonsoft.Json.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Web.Http.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\Newtonsoft.Json.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Web.Http.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.xml
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\obj\Debug\FoodyServer.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\obj\Debug\FoodyServer.dll
+C:\inetpub\wwwroot\FoodyServer\FoodyServer\obj\Debug\FoodyServer.pdb
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\ApplicationInsights.config
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\csc.exe
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\vbc.exe
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\FoodyServer.dll.config
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\FoodyServer.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\FoodyServer.pdb
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Newtonsoft.Json.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Web.Http.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.Web.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\Newtonsoft.Json.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Net.Http.Formatting.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Web.Http.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\bin\System.Web.Http.WebHost.xml
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\obj\Debug\FoodyServer.dll
+C:\Users\Thanh Tung\Downloads\FoodyServer\FoodyServer\obj\Debug\FoodyServer.pdb
