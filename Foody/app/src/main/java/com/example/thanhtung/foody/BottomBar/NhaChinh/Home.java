@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.thanhtung.foody.Fragment.AnGi_Fragment;
 import com.example.thanhtung.foody.Fragment.ODau_Fragment;
@@ -112,7 +113,7 @@ public class Home extends Fragment {
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
+                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
                 View bottomSheetView = LayoutInflater.from(getContext()).inflate(R.layout.home_bottomsheet_layout,null);
                 bottomSheetDialog.setContentView(bottomSheetView);
 
@@ -126,12 +127,14 @@ public class Home extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!Login) {
+                            bottomSheetDialog.dismiss();
                             Intent intent = new Intent(getActivity(), YeuCauDangNhap.class);
                             startActivity(intent);
-                            Login = true;
+                            //Login = true;
                         }
                         else {
-
+                            Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
+                            bottomSheetDialog.dismiss();
                         }
                     }
                 });
@@ -139,12 +142,14 @@ public class Home extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!Login) {
+                            bottomSheetDialog.dismiss();
                             Intent intent = new Intent(getActivity(), YeuCauDangNhap.class);
                             startActivity(intent);
-                            Login = true;
+                            //Login = true;
                         }
                         else {
-
+                            Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
+                            bottomSheetDialog.dismiss();
                         }
                     }
                 });
@@ -152,12 +157,14 @@ public class Home extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!Login) {
+                            bottomSheetDialog.dismiss();
                             Intent intent = new Intent(getActivity(), YeuCauDangNhap.class);
                             startActivity(intent);
-                            Login = true;
+                            //Login = true;
                         }
                         else {
-
+                            Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
+                            bottomSheetDialog.dismiss();
                         }
                     }
                 });
@@ -165,12 +172,14 @@ public class Home extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!Login) {
+                            bottomSheetDialog.dismiss();
                             Intent intent = new Intent(getActivity(), YeuCauDangNhap.class);
                             startActivity(intent);
-                            Login = true;
+                            //Login = true;
                         }
                         else {
-
+                            Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
+                            bottomSheetDialog.dismiss();
                         }
                     }
                 });
@@ -178,12 +187,14 @@ public class Home extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!Login) {
+                            bottomSheetDialog.dismiss();
                             Intent intent = new Intent(getActivity(), YeuCauDangNhap.class);
                             startActivity(intent);
-                            Login = true;
+                            //Login = true;
                         }
                         else {
-
+                            Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
+                            bottomSheetDialog.dismiss();
                         }
                     }
                 });

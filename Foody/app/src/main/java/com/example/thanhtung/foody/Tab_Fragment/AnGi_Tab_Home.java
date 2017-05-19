@@ -7,10 +7,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.thanhtung.foody.Adapter.MonAnAdapter;
 import com.example.thanhtung.foody.FoodyRestClient;
@@ -21,6 +21,7 @@ import com.loopj.android.http.RequestParams;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -131,8 +132,8 @@ public class AnGi_Tab_Home extends Fragment {
                     }
 
                     @Override
-                    public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                        Toast.makeText(getActivity(), responseString, Toast.LENGTH_LONG).show();
+                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                        Log.d("Failure", errorResponse.toString());
                     }
 
                     @Override
@@ -144,6 +145,6 @@ public class AnGi_Tab_Home extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        getAnGi();
+        //getAnGi();
     }
 }

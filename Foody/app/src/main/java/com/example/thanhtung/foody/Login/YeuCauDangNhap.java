@@ -21,11 +21,11 @@ public class YeuCauDangNhap extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yeucaudangnhap_main);
 
-        ImageView imgThoatKhoiManHinhDangNhap = (ImageView) findViewById(R.id.imgThoatKhoiManHinhDangNhap);
+        ImageView imgThoatKhoiManHinhDangNhap = (ImageView) findViewById(R.id.back_login);
         imgThoatKhoiManHinhDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Login=false;
+                //Login=false;
                 finish();
             }
         });
@@ -39,7 +39,7 @@ public class YeuCauDangNhap extends Activity {
             }
         });
 
-        Button btnDangNhapVoiEmail = (Button) findViewById(R.id.btnDangNhapVoiEmail);
+        Button btnDangNhapVoiEmail = (Button) findViewById(R.id.btnLoginEmail);
         btnDangNhapVoiEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,14 @@ public class YeuCauDangNhap extends Activity {
 
     @Override
     public void onBackPressed() {
-        Login=false;
+        //Login=false;
         finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Login)
+            finish();
     }
 }

@@ -13,14 +13,14 @@ import cz.msebera.android.httpclient.Header;
  */
 
 public class FoodyRestClient {
-    private static final String BASE_URL = "http://192.168.1.105/FoodyServer/";
-    //private static final String BASE_URL = "http://10.0.3.2/FoodyServer/";
+    //private static final String BASE_URL = "http://172.20.10.7/FoodyServer/";
+    private static final String BASE_URL = "http://10.0.3.2/FoodyServer/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
     public static void get(Context context, String url, Header[] headers, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.setTimeout(60*1000);
-        client.setConnectTimeout(600*1000);
+        client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);
         client.setMaxConnections(60);
         client.get(context, getAbsoluteUrl(url), headers, params, responseHandler);
@@ -31,7 +31,23 @@ public class FoodyRestClient {
         client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);
         client.setMaxConnections(60);
-        client.post(context, getAbsoluteUrl(url), headers, params, contentType, responseHandler);
+        client.post(context, getAbsoluteUrl(url), params, responseHandler);
+        //client.post(context, getAbsoluteUrl(url), headers, params, contenType, responseHandler);
+    }
+
+    public static void register(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        client.setTimeout(60*1000);
+        client.setConnectTimeout(60*1000);
+        client.setResponseTimeout(60*1000);
+        client.setMaxConnections(60);
+        client.get(getAbsoluteUrl(url), params, responseHandler);
+    }
+    public static void login(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        client.setTimeout(60*1000);
+        client.setConnectTimeout(60*1000);
+        client.setResponseTimeout(60*1000);
+        client.setMaxConnections(60);
+        client.get(getAbsoluteUrl(url), params, responseHandler);
     }
 
     private static String getAbsoluteUrl(String relativeUrl) {

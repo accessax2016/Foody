@@ -132,7 +132,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="46"
-        android:background="@drawable/shape_transparent_background"
+        android:background="@null"
         android:text="Đăng nhập"
         android:textAppearance="@style/CustomTextBold"
         android:textColor="@color/colorWhite" />

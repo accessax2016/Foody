@@ -8,9 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.thanhtung.foody.BottomBar.BoSuuTap.BoSuuTap;
 import com.example.thanhtung.foody.BottomBar.NhaChinh.Home;
-import com.example.thanhtung.foody.BottomBar.TaiKhoan.TaiKhoan;
+import com.example.thanhtung.foody.BottomBar.TaiKhoan.ThongTinTaiKhoan;
 import com.example.thanhtung.foody.BottomBar.ThongBao.ThongBao;
 import com.example.thanhtung.foody.BottomBar.TimKiem.TimKiem;
+import com.example.thanhtung.foody.Model.TaiKhoan;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     final public static String DATABASE_NAME = "QuanLyFoodyDB.sqlite";
     public static SQLiteDatabase database;
     public static boolean Login = false;
+    public static TaiKhoan user= null;
 
     public static BottomBar mBottomBar;
     Fragment selectedFragment;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 //    BoSuuTap collection = new BoSuuTap();
 //    TimKiem search = new TimKiem();
 //    ThongBao bell = new ThongBao();
-//    TaiKhoan user = new TaiKhoan();
+//    ThongTinTaiKhoan user = new ThongTinTaiKhoan();
 //    Boolean homeIsActive = false;
 //    Boolean collectionIsActive = false;
 //    Boolean searchIsActive = false;
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new ThongBao();
                         break;
                     case R.id.tab_user:
-                        selectedFragment = new TaiKhoan();
+                        selectedFragment = new ThongTinTaiKhoan();
                         break;
 
                 }
