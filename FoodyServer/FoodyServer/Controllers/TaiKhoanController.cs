@@ -9,6 +9,13 @@ namespace FoodyServer.Controllers
 {
     public class TaiKhoanController : ApiController
     {
+        public class TaiKhoanCustom
+        {
+            public String TaiKhoan;
+            public String MatKhau;
+            public String TenHienThi;
+            public String HinhDaiDien;
+        }
         [HttpGet]
         public TaiKhoan DangNhapTaiKhoan(string TaiKhoan, string MatKhau)
         {
@@ -37,6 +44,44 @@ namespace FoodyServer.Controllers
                 taikhoan.MatKhau = MatKhau;
                 taikhoan.TenHienThi = TenHienThi;
                 db.TaiKhoans.InsertOnSubmit(taikhoan);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+        [HttpGet]
+        public bool DoiMatKhau(string TaiKhoan, string MatKhau, string MatKhauMoi)
+        {
+            try
+            {
+                DBFoodyDataContext db = new DBFoodyDataContext();
+                TaiKhoan taikhoan = db.TaiKhoans.FirstOrDefault(x => x.TaiKhoan1 == TaiKhoan & x.MatKhau == MatKhau);
+                if (taikhoan == null)
+                    return false;
+                taikhoan.MatKhau = MatKhauMoi;
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+        
+        [HttpPost]
+        public bool DoiHinhDaiDien(TaiKhoanCustom tk)
+        {
+            try
+            {
+                DBFoodyDataContext db = new DBFoodyDataContext();
+                TaiKhoan taikhoan = db.TaiKhoans.FirstOrDefault(x => x.TaiKhoan1 == tk.TaiKhoan);
+                if (taikhoan == null)
+                    return false;
+
+                taikhoan.HinhDaiDien = Convert.FromBase64String(tk.HinhDaiDien);
                 db.SubmitChanges();
                 return true;
             }

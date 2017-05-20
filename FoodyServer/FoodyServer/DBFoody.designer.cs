@@ -1424,7 +1424,7 @@ namespace FoodyServer
 		
 		private string _TenHienThi;
 		
-		private System.Data.Linq.Binary _HinhDaiDien;
+		private byte[] _HinhDaiDien;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1436,7 +1436,7 @@ namespace FoodyServer
     partial void OnMatKhauChanged();
     partial void OnTenHienThiChanging(string value);
     partial void OnTenHienThiChanged();
-    partial void OnHinhDaiDienChanging(System.Data.Linq.Binary value);
+    partial void OnHinhDaiDienChanging(byte[] value);
     partial void OnHinhDaiDienChanged();
     #endregion
 		
@@ -1506,7 +1506,7 @@ namespace FoodyServer
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HinhDaiDien", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary HinhDaiDien
+		public byte[] HinhDaiDien
 		{
 			get
 			{

@@ -69,7 +69,6 @@ public class DangKy extends Activity {
         finish();
     }
 
-    Boolean register = false;
     public void DangKyTaiKhoan(String Email, String Pass, String ConfirmPass, String Name){
         RequestParams params = new RequestParams();
         if(Utility.isNotNull(Email) && Utility.isNotNull(Pass) && Utility.isNotNull(Name)&& Utility.isNotNull(ConfirmPass)){
@@ -81,11 +80,11 @@ public class DangKy extends Activity {
                         params.put("MatKhau", Pass);
                         params.put("TenHienThi", Name);
                         FoodyRestClient dangky = new FoodyRestClient();
-                        dangky.register("/api/TaiKhoan/DangKyTaiKhoan", params, new AsyncHttpResponseHandler() {
+                        dangky.register(getApplicationContext(), "/api/TaiKhoan/DangKyTaiKhoan", params, new AsyncHttpResponseHandler() {
                             @Override
                             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                                 try {
-                                    register= Boolean.valueOf(new String(responseBody,"UTF-8"));
+                                    Boolean register = Boolean.valueOf(new String(responseBody,"UTF-8"));
                                     if (register) {
                                         //message = "Đăng Ký Thành Công";
                                         Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_LONG).show();

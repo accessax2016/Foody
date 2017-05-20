@@ -25,9 +25,7 @@ public class TaiKhoan {
             TenHienThi = object.getString("TenHienThi");
             //Xử lý hình ảnh
             byte[] byteArray =  Base64.decode(object.getString("HinhDaiDien"), Base64.DEFAULT) ;
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 2;
-            this.HinhDaiDien =  BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length, options);
+            this.HinhDaiDien =  BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         } catch (JSONException e) {
             e.printStackTrace();
         }

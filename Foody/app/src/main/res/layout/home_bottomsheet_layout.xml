@@ -3,149 +3,173 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="5">
 
 
     <LinearLayout
-        android:id="@+id/loQuetMaCoupon"
-        android:paddingLeft="2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="100"
-        android:clickable="true">
-
-        <ImageView
-            android:id="@+id/imgQuetMaCoupon"
-            android:scaleY="0.7"
-            android:scaleX="0.7"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+        <LinearLayout
+            android:id="@+id/loQuetMaCoupon"
+            android:paddingLeft="2dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:src="@drawable/dg01" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:clickable="true">
 
-        <TextView
-            android:paddingLeft="5dp"
+            <ImageView
+                android:id="@+id/imgQuetMaCoupon"
+                android:scaleY="0.7"
+                android:scaleX="0.7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:src="@drawable/dg01" />
 
-            android:id="@+id/txtQuetMaCoupon"
+            <TextView
+                android:paddingLeft="5dp"
+
+                android:id="@+id/txtQuetMaCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="Quét mã coupon"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/loDangAnh"
+            android:padding="3dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:text="Quét mã coupon" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/imgDangAnh"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:src="@drawable/dg02"/>
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:id="@+id/txtDangAnh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="Đăng ảnh"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/loCheckIn"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:id="@+id/imgCheckIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:src="@drawable/dg03" />
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:id="@+id/txtCheckIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="Check in"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/loVietBinhLuan"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/imgVietBinhLuan"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:src="@drawable/dg04" />
+
+            <TextView
+                android:paddingLeft="5dp"
+
+                android:id="@+id/txtVietBinhLuan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="Viết bình luận"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/loThemDiaDiem"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/imgThemDiaDiem"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:src="@drawable/dg05" />
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:id="@+id/txtThemDiaDiem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="Thêm địa điểm"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:clickable="true"
-        android:id="@+id/loDangAnh"
-        android:padding="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:id="@+id/imgDangAnh"
-            android:scaleY="0.8"
-            android:scaleX="0.8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:src="@drawable/dg02"/>
-
-        <TextView
-            android:paddingLeft="5dp"
-            android:id="@+id/txtDangAnh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:text="Đăng ảnh" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:clickable="true"
-        android:id="@+id/loCheckIn"
-
-        android:padding="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:scaleY="0.8"
-            android:scaleX="0.8"
-            android:id="@+id/imgCheckIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:src="@drawable/dg03" />
-
-        <TextView
-            android:paddingLeft="5dp"
-            android:id="@+id/txtCheckIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:text="Check in" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:clickable="true"
-        android:id="@+id/loVietBinhLuan"
-        android:padding="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:id="@+id/imgVietBinhLuan"
-            android:scaleY="0.8"
-            android:scaleX="0.8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:src="@drawable/dg04" />
-
-        <TextView
-            android:paddingLeft="5dp"
-
-            android:id="@+id/txtVietBinhLuan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:text="Viết bình luận" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:clickable="true"
-        android:id="@+id/loThemDiaDiem"
-        android:padding="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:id="@+id/imgThemDiaDiem"
-            android:scaleY="0.8"
-            android:scaleX="0.8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:src="@drawable/dg05" />
-
-        <TextView
-            android:paddingLeft="5dp"
-            android:id="@+id/txtThemDiaDiem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:text="Thêm địa điểm" />
-    </LinearLayout>
 </LinearLayout>

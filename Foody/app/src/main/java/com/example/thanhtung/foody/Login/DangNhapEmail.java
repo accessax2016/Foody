@@ -2,6 +2,7 @@ package com.example.thanhtung.foody.Login;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.thanhtung.foody.FoodyRestClient;
+import com.example.thanhtung.foody.MainActivity;
 import com.example.thanhtung.foody.Model.TaiKhoan;
 import com.example.thanhtung.foody.R;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -68,7 +70,7 @@ public class DangNhapEmail extends Activity {
         params.put("TaiKhoan", email);
         params.put("MatKhau", password);
         FoodyRestClient dangnhap = new FoodyRestClient();
-        dangnhap.login("api/TaiKhoan/DangNhapTaiKhoan", params, new JsonHttpResponseHandler() {
+        dangnhap.login(getApplicationContext(), "api/TaiKhoan/DangNhapTaiKhoan", params, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         user = new TaiKhoan(response);
@@ -77,13 +79,19 @@ public class DangNhapEmail extends Activity {
                             Login = true;
                             Toast.makeText(getApplicationContext(), "Đăng Nhập Thành Công", Toast.LENGTH_LONG).show();
                             prgDialog.dismiss();
-                            finish();
+                            //Về trang chủ
+                            Intent intent = new Intent(DangNhapEmail.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
                         }
+                        else
+                            Toast.makeText(getApplicationContext(), "Đăng Nhập Thất Bại", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
-                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                    public void onFailure(int statusCode, Header[] headers, String errorResponse, Throwable throwable) {
                         Log.d("Failure", String.valueOf(statusCode));
+                        Toast.makeText(getApplicationContext(), "Kết Nối Thất Bại", Toast.LENGTH_LONG).show();
                         prgDialog.dismiss();
                     }
         });

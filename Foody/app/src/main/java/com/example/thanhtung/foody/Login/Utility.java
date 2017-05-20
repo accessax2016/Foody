@@ -33,6 +33,10 @@ public class Utility {
         return password1.matches(password2);
 
     }
+    public static boolean validateString(String s1, String s2) {
+        return s1.matches(s2);
+
+    }
     /**
      * Checks for Null String object
      *
