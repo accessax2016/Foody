@@ -44,7 +44,6 @@ public class DoiHinhDaiDien extends Activity {
     private static int REQUEST_LOAD_IMAGE = 1;
     private static int REQUEST_CAMERA = 2;
     private static Boolean ChangeImage = false;
-    String imgDecodableString;
 
     ProgressDialog prgDialog;
     ImageView back_doianhdaidien;

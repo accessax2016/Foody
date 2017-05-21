@@ -94,6 +94,13 @@ public class DangNhapEmail extends Activity {
                         Toast.makeText(getApplicationContext(), "Kết Nối Thất Bại", Toast.LENGTH_LONG).show();
                         prgDialog.dismiss();
                     }
+
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                        Log.d("Failure", String.valueOf(statusCode));
+                        Toast.makeText(getApplicationContext(), "Kết Nối Thất Bại", Toast.LENGTH_LONG).show();
+                        prgDialog.dismiss();
+                    }
         });
     }
 

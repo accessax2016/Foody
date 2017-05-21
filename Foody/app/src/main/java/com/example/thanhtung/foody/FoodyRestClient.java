@@ -63,6 +63,13 @@ public class FoodyRestClient {
         client.setMaxConnections(60);
         client.post(context, getAbsoluteUrl(url), entity, contenType, responseHandler);
     }
+    public static void themdiadiem(Context context, String url, HttpEntity entity, String contenType, AsyncHttpResponseHandler responseHandler) {
+        client.setTimeout(60*1000);
+        client.setConnectTimeout(60*1000);
+        client.setResponseTimeout(60*1000);
+        client.setMaxConnections(60);
+        client.post(context, getAbsoluteUrl(url), entity, contenType, responseHandler);
+    }
 
     private static String getAbsoluteUrl(String relativeUrl) {
         return BASE_URL + relativeUrl;

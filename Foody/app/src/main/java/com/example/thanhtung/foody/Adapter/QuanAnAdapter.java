@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.example.thanhtung.foody.Model.ODau;
 import com.example.thanhtung.foody.R;
@@ -39,11 +40,13 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
 
     public class HeaderItem extends RecyclerView.ViewHolder {
 
-        private ImageView img_quangcao;
+        private ViewFlipper viewFlipper;
         public HeaderItem(View itemView) {
             super(itemView);
 
-            img_quangcao = (ImageView) itemView.findViewById(R.id.imgHeader);
+            viewFlipper = (ViewFlipper) itemView.findViewById(R.id.viewFlipper);
+            viewFlipper.setFlipInterval(2000);
+            viewFlipper.startFlipping();
         }
     }
 
@@ -96,7 +99,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
 
         if (holder instanceof HeaderItem) {
             HeaderItem mHolder = (HeaderItem)holder;
-            mHolder.img_quangcao.setImageResource(imgHeader);
+            //mHolder.img_quangcao.setImageResource(imgHeader);
         } else if (holder instanceof CategoryItem){
             CategoryItem mHolder = (CategoryItem)holder;
             mHolder.img_category.setImageResource(imgCategory[position - 1]);

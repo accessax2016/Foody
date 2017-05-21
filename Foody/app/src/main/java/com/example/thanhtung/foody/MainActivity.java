@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     final public static String DATABASE_NAME = "QuanLyFoodyDB.sqlite";
     public static SQLiteDatabase database;
-    public static boolean Login = false;
+    public static boolean Login = true; //nhớ sửa lại false
     public static TaiKhoan user= null;
 
     public static BottomBar mBottomBar;

@@ -48,6 +48,7 @@
 
     </LinearLayout>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -92,7 +93,8 @@
                         android:padding="5dp"
                         android:text="Vietnam"
                         android:textAppearance="@style/CustomTextListView"
-                        android:textColor="@color/colorWhite" />
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txtChonThanhPhoThemDiaDiem"
@@ -106,7 +108,8 @@
                         android:padding="5dp"
                         android:text="TP.HCM"
                         android:textAppearance="@style/CustomTextListView"
-                        android:textColor="@color/colorWhite"/>
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txtChonQuanThemDiaDiem"
@@ -119,7 +122,8 @@
                         android:padding="3dp"
                         android:text="Chọn quận"
                         android:textAppearance="@style/CustomTextListView"
-                        android:textColor="@color/colorWhite"/>
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -169,6 +173,23 @@
                     android:paddingTop="5dp"
                     android:maxLines="1"
                     android:text="Loại hình địa điểm"
+                    android:textAppearance="@style/CustomText" />
+                <TextView
+                    android:id="@+id/txtChonDuongQuanThemDiaDiem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="10"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_toado"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:maxLines="1"
+                    android:text="Chọn đường"
                     android:textAppearance="@style/CustomText" />
 
                 <EditText
@@ -251,11 +272,12 @@
                     android:ems="10"
                     android:gravity="center_vertical"
                     android:hint="Số điện thoại"
-                    android:inputType="textPersonName"
+                    android:inputType="phone"
                     android:paddingBottom="5dp"
                     android:paddingLeft="4dp"
                     android:paddingTop="5dp"
-                    android:textAppearance="@style/CustomText" />
+                    android:textAppearance="@style/CustomText"
+                    android:textStyle="normal|bold" />
 
                 <LinearLayout
                     android:paddingTop="5dp"
@@ -296,7 +318,8 @@
                             android:padding="3dp"
                             android:text="09:00 AM"
                             android:textAppearance="@style/CustomTextListView"
-                            android:textColor="@color/colorWhite"/>
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -317,7 +340,8 @@
                             android:padding="3dp"
                             android:text="09:00 PM"
                             android:textAppearance="@style/CustomTextListView"
-                            android:textColor="@color/colorWhite"/>
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -351,16 +375,6 @@
                         android:orientation="horizontal"
                         android:weightSum="50">
 
-                        <EditText
-                            android:id="@+id/edtNhapGiaThapNhatCuaDiaDiem"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="14"
-                            android:ems="10"
-                            android:gravity="right"
-                            android:hint="Giá thấp nhất"
-                            android:textAppearance="@style/CustomTextListView" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -370,13 +384,25 @@
                             android:textAppearance="@style/CustomTextListView" />
 
                         <EditText
+                            android:id="@+id/edtNhapGiaThapNhatCuaDiaDiem"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="14"
+                            android:ems="10"
+                            android:gravity="right"
+                            android:hint="Giá thấp nhất"
+                            android:textAppearance="@style/CustomTextListView"
+                            android:inputType="number" />
+
+                        <EditText
                             android:id="@+id/edtNhapGiaCaoNhatCuaDiaDiem"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="14"
                             android:ems="10"
                             android:hint="Giá cao nhất"
-                            android:textAppearance="@style/CustomTextListView" />
+                            android:textAppearance="@style/CustomTextListView"
+                            android:inputType="number" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -407,6 +433,10 @@
                         android:textAppearance="@style/CustomText" />
                 </LinearLayout>
 
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/imgHinhAnhThemDiaDiem" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rcvHienThiHinhAnhDiaDiem"
                     android:layout_width="match_parent"
@@ -416,7 +446,6 @@
             </LinearLayout>
 
     </ScrollView>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -436,6 +465,7 @@
             android:id="@+id/ibtnChupAnhDiaDiem"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_post_review_black" />
+            android:src="@drawable/ic_post_review_black"
+            android:scaleType="centerCrop" />
     </LinearLayout>
 </LinearLayout>

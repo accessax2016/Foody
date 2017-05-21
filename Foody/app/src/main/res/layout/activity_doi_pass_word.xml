@@ -110,7 +110,8 @@
                     android:textSize="13sp"
                     android:padding="12dp"
                     android:background="@drawable/border_edittext_resetpass"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
 
@@ -148,7 +149,8 @@
                     android:textSize="13sp"
                     android:padding="12dp"
                     android:background="@drawable/border_edittext_resetpass"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
 
@@ -185,7 +187,8 @@
                     android:textSize="13sp"
                     android:padding="12dp"
                     android:background="@drawable/border_edittext_resetpass"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
 

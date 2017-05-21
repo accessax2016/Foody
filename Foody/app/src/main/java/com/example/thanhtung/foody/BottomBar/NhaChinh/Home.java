@@ -195,6 +195,8 @@ public class Home extends Fragment {
                         else {
                             Toast.makeText(getContext(), "Đã Login r", Toast.LENGTH_LONG).show();
                             bottomSheetDialog.dismiss();
+                            Intent intent = new Intent(getActivity(), ThemDiaDiem.class);
+                            startActivity(intent);
                         }
                     }
                 });

@@ -4,10 +4,28 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="100dp">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        app:srcCompat="@android:drawable/star_big_on"
-        android:id="@+id/imgHeader"
-        android:scaleType="fitXY"/>
+
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewFlipper"
+        android:outAnimation="@anim/left_out"
+        android:inAnimation="@anim/right_enter">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/quangcao1"
+            android:id="@+id/imgHeader1"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/quangcao2"
+            android:id="@+id/imgHeader2"
+            android:scaleType="fitXY"/>
+
+    </ViewFlipper>
 </LinearLayout>
