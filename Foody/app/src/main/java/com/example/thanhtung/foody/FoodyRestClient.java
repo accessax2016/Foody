@@ -27,29 +27,29 @@ public class FoodyRestClient {
         client.get(context, getAbsoluteUrl(url), headers, params, responseHandler);
     }
 
-    public static void post(Context context, String url, Header[] headers, RequestParams params, String contentType, AsyncHttpResponseHandler responseHandler) {
+    public static void post(String url, Header[] headers, RequestParams params, String contentType, AsyncHttpResponseHandler responseHandler) {
         client.setTimeout(60*1000);
         client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);
         client.setMaxConnections(60);
-        client.post(context, getAbsoluteUrl(url), params, responseHandler);
+        client.post(getAbsoluteUrl(url), params, responseHandler);
     }
 
-    public static void register(Context context, String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+    public static void register(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.setTimeout(60*1000);
         client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);
         client.setMaxConnections(60);
         client.get(getAbsoluteUrl(url), params, responseHandler);
     }
-    public static void login(Context context, String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+    public static void login(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.setTimeout(60*1000);
         client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);
         client.setMaxConnections(60);
         client.get(getAbsoluteUrl(url), params, responseHandler);
     }
-    public static void changepassword(Context context, String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+    public static void changepassword(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.setTimeout(60*1000);
         client.setConnectTimeout(60*1000);
         client.setResponseTimeout(60*1000);

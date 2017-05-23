@@ -145,6 +145,6 @@ public class AnGi_Tab_Home extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        //getAnGi();
+        getAnGi();
     }
 }

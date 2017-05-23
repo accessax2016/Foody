@@ -70,7 +70,7 @@ public class DangNhapEmail extends Activity {
         params.put("TaiKhoan", email);
         params.put("MatKhau", password);
         FoodyRestClient dangnhap = new FoodyRestClient();
-        dangnhap.login(getApplicationContext(), "api/TaiKhoan/DangNhapTaiKhoan", params, new JsonHttpResponseHandler() {
+        dangnhap.login("api/TaiKhoan/DangNhapTaiKhoan", params, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         user = new TaiKhoan(response);

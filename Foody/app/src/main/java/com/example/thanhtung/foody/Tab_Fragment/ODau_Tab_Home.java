@@ -141,6 +141,6 @@ public class ODau_Tab_Home extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        //getODau();
+        getODau();
     }
 }

@@ -76,7 +76,7 @@ public class DoiMatKhau extends Activity {
                         params.put("MatKhau", current_password);
                         params.put("MatKhauMoi", new_password);
                         FoodyRestClient doimatkhau = new FoodyRestClient();
-                        doimatkhau.changepassword(getApplicationContext(), "/api/TaiKhoan/DoiMatKhau", params, new AsyncHttpResponseHandler() {
+                        doimatkhau.changepassword("/api/TaiKhoan/DoiMatKhau", params, new AsyncHttpResponseHandler() {
                             @Override
                             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                                 try {

@@ -9,6 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="46"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageView
+            android:id="@+id/imgThoatManHinhDangKy"
+            android:background="@drawable/btn_clicked"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_left"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Đăng ký"
+            android:textAppearance="@style/CustomTextHeader"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="8"
         android:weightSum="68"
@@ -96,36 +126,7 @@
             android:text="Mật khẩu phải có ít nhất 4 ký tự" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="46"
-        android:orientation="horizontal"
-        android:weightSum="100">
 
-        <ImageView
-            android:id="@+id/imgThoatManHinhDangKy"
-            android:background="@drawable/btn_clicked"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="90"
-            android:clickable="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_arrow_left"
-            android:padding="5dp"/>
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:gravity="center_vertical"
-            android:paddingLeft="5dp"
-            android:text="Đăng ký"
-            android:textAppearance="@style/CustomTextHeader"
-            android:textColor="@color/colorWhite" />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnDangNhap"

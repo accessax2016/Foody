@@ -80,7 +80,7 @@ public class DangKy extends Activity {
                         params.put("MatKhau", Pass);
                         params.put("TenHienThi", Name);
                         FoodyRestClient dangky = new FoodyRestClient();
-                        dangky.register(getApplicationContext(), "/api/TaiKhoan/DangKyTaiKhoan", params, new AsyncHttpResponseHandler() {
+                        dangky.register("/api/TaiKhoan/DangKyTaiKhoan", params, new AsyncHttpResponseHandler() {
                             @Override
                             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                                 try {
