@@ -48,11 +48,12 @@ public class ODau_Tab_DanhMuc extends Fragment {
         final View v = inflater.inflate(R.layout.layout_list, container, false);
 
         lvItems = (ListView) v.findViewById(R.id.lv_custom);
-        fillData();
-        adapter = new DanhMucODauAdapter(getContext(), "Danh mục", listDanhMuc);
-        lvItems.setAdapter(adapter);
+        fillData(); //đổ dữ liệu cho list
+        adapter = new DanhMucODauAdapter(getContext(), "Danh mục", listDanhMuc);    //tạo adapter cho list vừa đổ dữ liệu
+        lvItems.setAdapter(adapter);    //set adapter cho listview
 
         lvItems.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        //set sự kiện cho list khi click item
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

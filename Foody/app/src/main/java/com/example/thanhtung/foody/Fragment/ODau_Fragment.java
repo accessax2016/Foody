@@ -39,20 +39,20 @@ public class ODau_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mTabHostODau = new FragmentTabHost(getActivity());
         mTabHostODau.setup(getActivity(), getChildFragmentManager(), R.layout.fragment_odau);
-
+        //thêm các tab cho tabhost
         setupTab(new TextView(getContext()), "Ở Đâu", ODau_Tab_Home.class);
         setupTab(new TextView(getContext()), "Mới nhất", ODau_Tab_MoiNhat.class);
         setupTab(new TextView(getContext()), danhmuc_odau, ODau_Tab_DanhMuc.class);
         setupTab(new TextView(getContext()), diadiem_odau, ODau_Tab_ThanhPho.class);
 
-        mTabHostODau.getTabWidget().getChildAt(0).setVisibility(View.GONE);
+        mTabHostODau.getTabWidget().getChildAt(0).setVisibility(View.GONE); //ẳn tab quán ăn
         //set color cho tab khi khoi tao
         TextView moinhat = (TextView) mTabHostODau.getTabWidget().getChildAt(1).findViewById(R.id.tabname);
         moinhat.setTextColor(Color.RED);
         TextView thanhpho = (TextView) mTabHostODau.getTabWidget().getChildAt(3).findViewById(R.id.tabname);
         thanhpho.setTextColor(Color.RED);
 
-        Reselect();
+        Reselect(); //xử lý khi click giữa các tab
 
 
         return mTabHostODau;

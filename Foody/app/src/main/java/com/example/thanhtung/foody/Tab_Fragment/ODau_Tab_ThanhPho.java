@@ -54,6 +54,7 @@ public class ODau_Tab_ThanhPho extends Fragment {
 
         tvThanhPho = (TextView) v.findViewById(R.id.tvDiaDiem);
         tvThanhPho.setText(TenThanhPho);
+        //set sự kiện cho tv tên thành phố
         tvThanhPho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,9 +71,9 @@ public class ODau_Tab_ThanhPho extends Fragment {
         });
         expandableListView =(ExpandableListView)v.findViewById(R.id.expand_listview);
 
-        fillData();
-        listAdapter = new DiaDiemODauAdapter(getContext(), Headings, ChildList);
-        expandableListView.setAdapter(listAdapter);
+        fillData(); //đổ dữ liệu cho các list
+        listAdapter = new DiaDiemODauAdapter(getContext(), Headings, ChildList);    //tạo adapter cho các list vừa tạo
+        expandableListView.setAdapter(listAdapter);     //set adapter cho list
 
         expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override

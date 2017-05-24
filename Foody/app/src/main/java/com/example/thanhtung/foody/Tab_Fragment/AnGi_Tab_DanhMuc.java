@@ -49,10 +49,10 @@ public class AnGi_Tab_DanhMuc extends Fragment {
         View v = inflater.inflate(R.layout.layout_list, container, false);
 
         lvItems = (ListView) v.findViewById(R.id.lv_custom);
-        fillData();
-        final DanhMucAnGiAdapter adapter = new DanhMucAnGiAdapter(getContext(), "Danh mục", listDanhMuc);
-        lvItems.setAdapter(adapter);
-
+        fillData(); //đổ dữ liệu vào list
+        final DanhMucAnGiAdapter adapter = new DanhMucAnGiAdapter(getContext(), "Danh mục", listDanhMuc);   //tạo adapter từ list mới đổ dữ liệu
+        lvItems.setAdapter(adapter);    //set adapter cho listview
+        //set sự kiện khi click chọn item trong listview
         lvItems.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

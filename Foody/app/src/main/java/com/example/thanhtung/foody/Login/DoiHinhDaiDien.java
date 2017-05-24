@@ -160,10 +160,7 @@ public class DoiHinhDaiDien extends Activity {
 
     }
     public void loadImagefromGallery() {
-        // Create intent to Open Image applications like Gallery, Google Photos
-        Intent galleryIntent = new Intent(Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        // Start the Intent
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galleryIntent, REQUEST_LOAD_IMAGE);
     }
     private void loadImagefromCamera()
@@ -176,24 +173,19 @@ public class DoiHinhDaiDien extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
-            // When an Image is picked
             if (resultCode == RESULT_OK) {
                 if (requestCode == REQUEST_LOAD_IMAGE && null != data) {
-                    // Get the Image from data
 
                     Uri selectedImage = data.getData();
                     String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
-                    // Get the cursor
                     Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-                    // Move to first row
                     cursor.moveToFirst();
 
                     int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                     String imgDecodableString = cursor.getString(columnIndex);
                     cursor.close();
 
-                    // Set the Image in ImageView after decoding the String
                     imgHinhDaiDien.setImageBitmap(BitmapFactory.decodeFile(imgDecodableString));
                     ChangeImage = true;
                 }

@@ -26,14 +26,14 @@ public class MoiNhatAdapter extends BaseAdapter {
     int[] img_custom;
     String[] tv_custom;
     FragmentTabHost mTabHost;
-
+    //constructor
     public MoiNhatAdapter(Context context, int[] img_custom, String[] tv_custom, FragmentTabHost mTabHost) {
         this.context = context;
         this.img_custom = img_custom;
         this.tv_custom = tv_custom;
         this.mTabHost = mTabHost;
     }
-
+    //override các method
     @Override
     public int getCount() {
         return tv_custom.length ;
@@ -60,6 +60,7 @@ public class MoiNhatAdapter extends BaseAdapter {
 
         tv.setText(tv_custom[position]);
         img.setImageResource(img_custom[position]);
+        //thay đổi hình khi click vào
         if (((ListView)parent).isItemChecked(position)) {
             IsPressFirstItem_MoiNhat = true;
             tv.setTextColor(Color.RED);

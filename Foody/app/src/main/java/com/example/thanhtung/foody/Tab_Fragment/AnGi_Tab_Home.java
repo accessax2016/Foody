@@ -61,12 +61,12 @@ public class AnGi_Tab_Home extends Fragment {
         listView = (RecyclerView)v.findViewById(R.id.rv_home);
 
         listView.setHasFixedSize(true);
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);   //chia recyclerview thành 2 phần
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
 
-                return position == 0 ? 2 : position <= 10 ? 1 : 1;
+                return position == 0 ? 2 : position <= 10 ? 1 : 1;      //set các kiểu của list đc cấp bao nhiêu phần
             }
         });
         listView.setLayoutManager(layoutManager);
@@ -78,6 +78,7 @@ public class AnGi_Tab_Home extends Fragment {
         listView.scrollToPosition(0);
 
         swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
+        //sự kiện kéo để load lại
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -93,11 +94,12 @@ public class AnGi_Tab_Home extends Fragment {
     private void getAnGi(){
         List<Header> headers = new ArrayList<Header>();
         headers.add(new BasicHeader("Accept", "application/json"));
+        //tạo param để truyền dữ liệu
         RequestParams params = new RequestParams();
         params.put("TenDanhMuc", danhmuc_angi);
         params.put("KieuDiaDiem", kieudiadiem_angi);
         params.put("TenDiaDiem", diadiem_angi);
-
+        //sử dụng async http client để gọi đến services
         FoodyRestClient angi = new FoodyRestClient();
         angi.get(getContext(), "api/AnGi/GetAnGiList", headers.toArray(new Header[headers.size()]),
                 params, new JsonHttpResponseHandler() {

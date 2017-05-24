@@ -39,9 +39,10 @@ public class AnGi_Tab_MoiNhat extends Fragment {
         int[] img_custom={ R.drawable.mnod01, R.drawable.mnod02, R.drawable.mnod03, R.drawable.mnod04};
 
         lvItems = (ListView) v.findViewById(R.id.lv_custom);
-        lvItems.setAdapter(new MoiNhatAdapter(getContext(), img_custom,tv_custom, mTabHostAnGi));
+        lvItems.setAdapter(new MoiNhatAdapter(getContext(), img_custom,tv_custom, mTabHostAnGi));   //set adapter theo dữ liệu có sẵn
 
         lvItems.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        //set sự kiện khi click item trong list
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

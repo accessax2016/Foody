@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder> {
-
+    //các kiểu của list quán ăn
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_CATEGORY = 1;
     private static final int TYPE_DATA = 2;
@@ -29,7 +29,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
     private int[] imgCategory;
     private String[] tvCategory;
     private List<ODau> listODau;
-
+    //constructor
     public QuanAnAdapter(Context context, int imgHeader, int[] imgCategory, String[] tvCategory, List<ODau> listODau) {
         this.context=context;
         this.imgHeader=imgHeader;
@@ -37,7 +37,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
         this.tvCategory=tvCategory;
         this.listODau=listODau;
     }
-
+    //class ViewHolder dành cho header, xử lý hiển thị phần Header
     public class HeaderItem extends RecyclerView.ViewHolder {
 
         private ViewFlipper viewFlipper;
@@ -45,11 +45,11 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
             super(itemView);
 
             viewFlipper = (ViewFlipper) itemView.findViewById(R.id.viewFlipper);
-            viewFlipper.setFlipInterval(2000);
-            viewFlipper.startFlipping();
+            viewFlipper.setFlipInterval(2000);  //set thời gian chờ
+            viewFlipper.startFlipping();    //tự động thay đổi hình theo thời gian chờ
         }
     }
-
+    //class ViewHolder dành cho header, xử lý hiển thị phần Category
     public class CategoryItem extends RecyclerView.ViewHolder {
 
         private ImageView img_category;
@@ -61,7 +61,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
             tv_category = (TextView) itemView.findViewById(R.id.tvCategory);
         }
     }
-
+    //class ViewHolder dành cho header, xử lý hiển thị phần Data
     public class DataItem extends RecyclerView.ViewHolder {
         private TextView tvDiem;
         private TextView tvTen;
@@ -79,6 +79,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder viewHolder;
+        //tùy kiểu sẽ lấy layout khác nhau
         if (viewType == TYPE_HEADER) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tab_main_header, parent, false);
 
@@ -96,7 +97,7 @@ public class QuanAnAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+        //tùy kiểu gắn giá trị khác nhau
         if (holder instanceof HeaderItem) {
             HeaderItem mHolder = (HeaderItem)holder;
             //mHolder.img_quangcao.setImageResource(imgHeader);

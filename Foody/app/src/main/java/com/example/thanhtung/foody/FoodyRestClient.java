@@ -14,7 +14,7 @@ import cz.msebera.android.httpclient.HttpEntity;
  */
 
 public class FoodyRestClient {
-    private static final String BASE_URL = "http://192.168.1.110/FoodyServer/";
+    private static final String BASE_URL = "http://192.168.43.184/FoodyServer/";
     //private static final String BASE_URL = "http://10.0.3.2/FoodyServer/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();

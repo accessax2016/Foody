@@ -25,17 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static BottomBar mBottomBar;
     Fragment selectedFragment;
-//    Fragment currentFragment;
-//    Home home = new Home();
-//    BoSuuTap collection = new BoSuuTap();
-//    TimKiem search = new TimKiem();
-//    ThongBao bell = new ThongBao();
-//    ThongTinTaiKhoan user = new ThongTinTaiKhoan();
-//    Boolean homeIsActive = false;
-//    Boolean collectionIsActive = false;
-//    Boolean searchIsActive = false;
-//    Boolean bellIsActive = false;
-//    Boolean userIsActive = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mBottomBar=(BottomBar)findViewById(R.id.bottombar);
-
+        //sự kiện click giữa các tab trong bottombar
         mBottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
@@ -65,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                 }
+                //thay thế tab hiện tại thành tab mới
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, selectedFragment).commit();
             }
         });

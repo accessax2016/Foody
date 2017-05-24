@@ -61,12 +61,12 @@ public class ODau_Tab_Home extends Fragment {
         listView = (RecyclerView)v.findViewById(R.id.rv_home);
 
         listView.setHasFixedSize(true);
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);       //chia recyclerviwe thành 2 phần
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
 
-                return position == 0 ? 2 : position <= 10 ? 1 : 2;
+                return position == 0 ? 2 : position <= 10 ? 1 : 2;      //set các kiểu của list đc cấp bao nhiêu phần
             }
         });
         listView.setLayoutManager(layoutManager);
@@ -78,6 +78,7 @@ public class ODau_Tab_Home extends Fragment {
         listView.scrollToPosition(0);
 
         swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
+        //sự kiện kéo để load lại
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -94,11 +95,12 @@ public class ODau_Tab_Home extends Fragment {
     private void getODau(){
         List<Header> headers = new ArrayList<Header>();
         headers.add(new BasicHeader("Accept", "application/json"));
+        //tạo param để truyền dữ liệu
         RequestParams params = new RequestParams();
         params.put("TenDanhMuc", danhmuc_odau);
         params.put("KieuDiaDiem", kieudiadiem_odau);
         params.put("TenDiaDiem", diadiem_odau);
-
+        //sử dụng async http client để gọi đến services
         FoodyRestClient odau = new FoodyRestClient();
         odau.get(getContext(), "api/ODau/GetODauList", headers.toArray(new Header[headers.size()]),
                 params, new JsonHttpResponseHandler() {

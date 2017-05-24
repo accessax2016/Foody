@@ -18,18 +18,18 @@ import java.util.ArrayList;
 
 
 public class DoiThanhPhoAdapter extends BaseAdapter {
-
+    //các kiểu trong list thành phố
     private static final int TYPE_HEARDER = 0;
     private static final int TYPE_ITEM = 1;
 
     Context context;
     ArrayList<ThanhPho> thanhPhos;
-
+    //constructor
     public DoiThanhPhoAdapter(Context context, ArrayList<ThanhPho> thanhPhos) {
         this.context = context;
         this.thanhPhos = thanhPhos;
     }
-
+    //override các method
     @Override
     public int getViewTypeCount() {
         return 2;
@@ -61,7 +61,7 @@ public class DoiThanhPhoAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView;
-
+        //tùy kiểu sẽ lấy layout khác nhau
         int rowType = getItemViewType(position);
         if (rowType == TYPE_HEARDER){
             rowView = inflater.inflate(R.layout.item_chonthanhpho_header, null);

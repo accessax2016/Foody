@@ -25,20 +25,20 @@ import static com.example.thanhtung.foody.R.id.tv_normal;
  */
 
 public class DanhMucAnGiAdapter extends BaseAdapter {
-
+    //khai báo cách kiểu trong listview
     private static final int TYPE_HEARDER = 0;
     private static final int TYPE_ITEM = 1;
 
     Context context;
     String HeaderDanhMuc;
     ArrayList<DanhMuc> listDanhMuc;
-
+    //constructor
     public DanhMucAnGiAdapter(Context context, String headerDanhMuc, ArrayList<DanhMuc> listDanhMuc) {
         this.context = context;
         this.HeaderDanhMuc = headerDanhMuc;
         this.listDanhMuc = listDanhMuc;
     }
-
+    //override các method
     @Override
     public int getViewTypeCount() {
         return 2;
@@ -70,7 +70,7 @@ public class DanhMucAnGiAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView;
-
+        //tùy kiểu sẽ lấy layout khác nhau
         int rowType = getItemViewType(position);
         if (rowType == TYPE_HEARDER){
             rowView = inflater.inflate(R.layout.normal_list, null);

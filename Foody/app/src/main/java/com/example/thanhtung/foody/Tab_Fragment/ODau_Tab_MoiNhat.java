@@ -39,9 +39,10 @@ public class ODau_Tab_MoiNhat extends Fragment {
                 R.drawable.mnod05, R.drawable.mnod06, R.drawable.mnod07, R.drawable.mnod08};
 
         lvItems = (ListView) v.findViewById(R.id.lv_custom);
-        lvItems.setAdapter(new MoiNhatAdapter(getContext(), img_custom,tv_custom, mTabHostODau));
+        lvItems.setAdapter(new MoiNhatAdapter(getContext(), img_custom,tv_custom, mTabHostODau));   //set adapter cho dữ liệu có sẵn
 
         lvItems.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        //set sự kiện click item cho list
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

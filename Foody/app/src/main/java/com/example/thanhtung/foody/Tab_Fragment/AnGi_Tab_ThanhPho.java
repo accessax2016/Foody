@@ -52,6 +52,7 @@ public class AnGi_Tab_ThanhPho extends Fragment {
         View v = inflater.inflate(R.layout.layout_thanhpho, container, false);
 
         tvThanhPho = (TextView) v.findViewById(R.id.tvDiaDiem);
+        //set sự kiện khi click tv tên thành phố
         tvThanhPho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,9 +69,9 @@ public class AnGi_Tab_ThanhPho extends Fragment {
         });
         expandableListView =(ExpandableListView)v.findViewById(R.id.expand_listview);
 
-        fillData();
-        listAdapter = new DiaDiemAnGiAdapter(getContext(), Headings, ChildList);
-        expandableListView.setAdapter(listAdapter);
+        fillData(); //đổ dữ liệu vào các list
+        listAdapter = new DiaDiemAnGiAdapter(getContext(), Headings, ChildList);    //tạo adapter từ các list mới đổ dữ liệu
+        expandableListView.setAdapter(listAdapter); //set adapter cho list
 
         //btnDoiTinhThanh
         btnDoiTinhThanh =(Button)v.findViewById(R.id.btnDoiTinhThanh);

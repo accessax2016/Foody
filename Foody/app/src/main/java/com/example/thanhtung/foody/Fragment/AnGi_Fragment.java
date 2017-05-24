@@ -39,19 +39,19 @@ public class AnGi_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mTabHostAnGi = new FragmentTabHost(getActivity());
         mTabHostAnGi.setup(getActivity(), getChildFragmentManager(), R.layout.fragment_angi);
-
+        //thêm các tab cho tabhost
         setupTab(new TextView(getContext()), "Ở Đâu", AnGi_Tab_Home.class);
         setupTab(new TextView(getContext()), "Mới nhất", AnGi_Tab_MoiNhat.class);
         setupTab(new TextView(getContext()), danhmuc_angi, AnGi_Tab_DanhMuc.class);
         setupTab(new TextView(getContext()), diadiem_angi, AnGi_Tab_ThanhPho.class);
 
-        mTabHostAnGi.getTabWidget().getChildAt(0).setVisibility(View.GONE);
+        mTabHostAnGi.getTabWidget().getChildAt(0).setVisibility(View.GONE); //ẩn tab quán ăn
         //set color cho tab khi khoi tao
         TextView moinhat = (TextView) mTabHostAnGi.getTabWidget().getChildAt(1).findViewById(R.id.tabname);
         moinhat.setTextColor(Color.RED);
         TextView thanhpho = (TextView) mTabHostAnGi.getTabWidget().getChildAt(3).findViewById(R.id.tabname);
         thanhpho.setTextColor(Color.RED);
-        Reselect();
+        Reselect(); //xử lý khi click giữa các tab trong tabhost
 
 
         return mTabHostAnGi;

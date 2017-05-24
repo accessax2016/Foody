@@ -32,13 +32,14 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
     private List<QuanHuyen> header_titles;
     private HashMap<String, List<DuongQuan>> child_titles;
     private Context ctx;
-
+    //constructor
     public DiaDiemODauAdapter(Context ctx, List<QuanHuyen> header_titles, HashMap<String, List<DuongQuan>> chiled_titles)
     {
         this.ctx = ctx;
         this.child_titles = chiled_titles;
         this.header_titles = header_titles;
     }
+    //override các method
     @Override
     public int getGroupCount() {
         return header_titles.size();
@@ -74,6 +75,7 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
         return false;
     }
 
+    //method xử lý hiển thị cho các group (cụ thể là list các quận huyện của thành phố)
     @Override
     public View getGroupView(final int groupPosition, final boolean isExpanded, View convertView, final ViewGroup parent) {
         QuanHuyen title = (QuanHuyen)this.getGroup(groupPosition);
@@ -86,6 +88,7 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
         textView.setText(title.getTenQuan());
         Button btnSoDuong = (Button)convertView.findViewById(R.id.btnSoDuong);
         btnSoDuong.setText(this.getChildrenCount(groupPosition) + " đường");
+        //set sự khiện khi click vào button số đường sẽ mở các đường trong quận và đóng nếu đã mở
         btnSoDuong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,7 +98,7 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
                     ((ExpandableListView) parent).expandGroup(groupPosition, true);
             }
         });
-
+        //set sự kiện click chọn quận huyện để lấy id và lọc
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +116,7 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
 
         return convertView;
     }
-
+    //method xử lý hiển thị cho list child (cụ thể là list các đường trong quận huyện)
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         DuongQuan title = (DuongQuan)this.getChild(groupPosition, childPosition);
@@ -124,7 +127,7 @@ public class DiaDiemODauAdapter extends BaseExpandableListAdapter {
         }
         final TextView textView = (TextView)convertView.findViewById(R.id.child_item);
         textView.setText(title.getTenDuong());
-
+        //set sự kiện khi click chọn đường để lấy id và lọc
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
